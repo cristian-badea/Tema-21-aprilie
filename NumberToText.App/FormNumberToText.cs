@@ -33,8 +33,9 @@ namespace NumberToText.App
 
         private void textBoxNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
-            char character = e.KeyChar;
-            if (Char.IsDigit(character) == false && character != 8)
+            char _character = e.KeyChar;
+            //conditie daca caracterul nu este numar + caracterul sa nu fie backspace ( 8 ) 
+            if (Char.IsDigit(_character) == false && _character != 8)
             {
                 e.Handled = true;
                 MessageBox.Show("Only numbers!");
